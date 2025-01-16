@@ -1,2 +1,9 @@
 Name: James Kenneth S. Acabal
 Nickname: James
+
+Motivation: My motivation for joining computer science stems from a deep fascination 
+with technology and its potential to solve real-world problems. I am eager to learn how
+to create innovative software solutions that can improve people's lives and drive 
+progress in various fields.
+
+
