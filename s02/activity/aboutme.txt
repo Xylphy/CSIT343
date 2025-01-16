@@ -7,3 +7,12 @@ to create innovative software solutions that can improve people's lives and driv
 progress in various fields.
 
 
+Work Experience (Example only):
+Software Developer Intern at XYZ Company (June 2022 - August 2022)
+- Developed and maintained web applications using JavaScript, HTML, and CSS.
+- Collaborated with a team of developers to design and implement new features.
+- Assisted in debugging and troubleshooting issues in existing code.
+
+IT Support Specialist at ABC Corporation (January 2021 - May 2022)
+- Provided technical support to employees, resolving hardware and software issues.
+- Managed and maintained the company's computer systems and networks.
