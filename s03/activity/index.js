@@ -39,7 +39,7 @@ let realName = "Steve Rogers";
 console.log("My real name is:");
 console.log(realName);
 
-let currentAge = true;
+let currentAge = 20;
 console.log("My current age is: ");
 console.log(currentAge);
 
