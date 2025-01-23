@@ -50,7 +50,7 @@ console.log("Is the current user an admin?: " + isAdmin);
 
 let companyName = "XYZ Industries";
 let companyEmail = "xyzindustries@gmail.com";
-let companyContact = "09180001234";
+let companyContact = 9180001234;
 let employees = ["Megumi", "Yuji", "Nobara"];
 let companyAddress = {
     street: "Orange St.",
