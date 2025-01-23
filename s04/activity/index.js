@@ -28,7 +28,7 @@ console.log("Your deposits: " + deposits);
 let expenses = [1000, 2000, 500, 210];
 console.log("Your expenses: " + expenses);
 
-let isAdmin = "yes";
+let isAdmin = true;
 console.log("Is the current user an admin?: " + isAdmin);
 
 /*
