@@ -50,7 +50,7 @@ console.log("Is the current user an admin?: " + isAdmin);
 
 let companyName = "XYZ Industries";
 let companyEmail = "xyzindustries@gmail.com";
-let companyContact = 9180001234;
+let companyContact = 9180001234; // Expected value is 09180001234 but leading 0 is removed because it is a number as per the instruction.
 let employees = ["Megumi", "Yuji", "Nobara"];
 let companyAddress = {
     street: "Orange St.",
