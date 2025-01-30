@@ -6,7 +6,6 @@
 
 console.log("Hello World");
 
-
 /*
     4. Create a function named getUserInfo. 
 
@@ -30,16 +29,15 @@ console.log("Hello World");
 function getUserInfo() {
     let user = {
         name: "John Doe",
-        age: 30,
-        address: "1234 Elm Street",
+        age: 25,
+        address: "123 Street, Quezon City",
         isMarried: false,
-        petName: "Fido"
-    }
+        petName: "Danny",
+    };
     console.log(user);
 }
 
 getUserInfo();
-
 
 /*
     5. Create a function named getArtistsArray which is able to log an array with at least 5 names of your favorite bands or artists.
@@ -52,15 +50,18 @@ getUserInfo();
         Invoke the function to display its value in the console.
 */
 
-
-
 function getArtistsArray() {
-    let artists = ["The Beatles", "The Rolling Stones", "The Who", "Led Zeppelin", "Pink Floyd"];
+    let artists = [
+        "Ben & Ben",
+        "Arthur Nery",
+        "Linkin Park",
+        "Paramore",
+        "Taylor Swift",
+    ];
     console.log(artists);
 }
 
 getArtistsArray();
-
 
 /*
     6. Create a function named getSongsArray which is able to log an array with at least 5 titles of your favorite songs.
@@ -74,12 +75,17 @@ getArtistsArray();
 */
 
 function getSongsArray() {
-    let songs = ["Hey Jude", "Gimme Shelter", "Baba O'Riley", "Stairway to Heaven", "Comfortably Numb"];
+    let songs = [
+        "Kathang Isip",
+        "Binhi",
+        "In The End",
+        "Bring by Boring Brick",
+        "Love Story",
+    ];
     console.log(songs);
 }
 
 getSongsArray();
-
 
 /*
     7. Create a function named getMoviesArray which is able to log an array with at least 5 titles of your favorite movies.
@@ -93,12 +99,17 @@ getSongsArray();
 */
 
 function getMoviesArray() {
-    let movies = ["The Godfather", "The Shawshank Redemption", "The Dark Knight", "Pulp Fiction", "The Empire Strikes Back"];
+    let movies = [
+        "The Lion King",
+        "Meet the Robinsons",
+        "Howl's Moving Castle",
+        "Tangled",
+        "Frozen",
+    ];
     console.log(movies);
 }
 
 getMoviesArray();
-
 
 /*
     8. Create a function named getPrimeNumberArray which is able to log an array with at least 5 prime numbers.
@@ -112,12 +123,11 @@ getMoviesArray();
 */
 
 function getPrimeNumberArray() {
-    let primeNumbers = [2, 3, 5, 7, 11];
+    let primeNumbers = [2, 3, 5, 7, 17];
     console.log(primeNumbers);
 }
 
 getPrimeNumberArray();
-
 
 /*
 9. Add your changes.
