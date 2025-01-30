@@ -34,12 +34,12 @@ console.log("Hello World");
 
 function getUserInfo() {
     return {
-        name: "Michael Villanueva",
+        name: "John Doe",
         age: 25,
-        address: "Manila",
+        address: "123 Street, Quezon City",
         isMarried: false,
-        petName: "None"
-    }
+        petName: "Danny",
+    };
 }
 
 let user = getUserInfo();
@@ -62,7 +62,13 @@ console.log(user);
 */
 
 function getArtistsArray() {
-    return ["The Beatles", "Queen", "The Rolling Stones", "The Beach", "The Doors"];
+    return [
+        "Ben & Ben",
+        "Arthur Nery",
+        "Linkin Park",
+        "Paramore",
+        "Taylor Swift",
+    ];
 }
 
 let artists = getArtistsArray();
@@ -83,7 +89,13 @@ console.log(artists);
 */
 
 function getSongsArray() {
-    return ["Hey Jude", "Bohemian Rhapsody", "Paint It Black", "Good Vibrations", "Light My Fire"];
+    return [
+        "Kathang Isip",
+        "Binhi",
+        "In The End",
+        "Bring by Boring Brick",
+        "Love Story",
+    ];
 }
 
 let songs = getSongsArray();
@@ -103,11 +115,15 @@ console.log(songs);
         Note: This is optional.
 */
 
-
 function getMoviesArray() {
-    return ["The Godfather", "The Shawshank Redemption", "Pulp Fiction", "The Dark Knight", "The Lord of the Rings"];
+    return [
+        "The Lion King",
+        "Meet the Robinsons",
+        "Howl's Moving Castle",
+        "Tangled",
+        "Frozen",
+    ];
 }
-
 
 let movies = getMoviesArray();
 console.log(movies);
@@ -127,7 +143,7 @@ console.log(movies);
 */
 
 function getPrimeNumberArray() {
-    return [2, 3, 5, 7, 11];
+    return [2, 3, 5, 7, 17];
 }
 
 let primeNumbers = getPrimeNumberArray();
@@ -143,11 +159,10 @@ console.log(primeNumbers);
 let globalTreasure = "Golden Key";
 
 function seekGlobalTreasure() {
-    return "Global Treasure Found: " + globalTreasure;
+    return "Global Treasure Found:" + globalTreasure;
 }
 
 console.log(seekGlobalTreasure());
-
 
 /*
     10. Explore and understand the concept of scope in JavaScript through a series of coding challenges. Use your knowledge of scope to correctly declare and access variables within different scopes.
@@ -159,10 +174,16 @@ console.log(seekGlobalTreasure());
 
 function localQuest() {
     let localGems = "Shiny Diamonds";
-    return "Local Gems Discovered: " + localGems;
+    return "Local Gems Discovered:" + localGems;
 }
 
 console.log(localQuest());
+
+{
+    var hidden = "Hidden Treasure";
+}
+
+console.log("Block Secret Revealed:" + hidden);
 
 /* Debugging */
 /* 
@@ -173,11 +194,11 @@ console.log(localQuest());
 */
 
 function returnSquared12() {
-    return 12 ** 2
+    return 12 ** 2;
 }
 
 let result = returnSquared12();
-console.log(result)
+console.log(result);
 
 function returnRegisteredEmails() {
     let emails = ["mara@mail.com", "clara@mail.com", "julie@mail.com"];
@@ -185,14 +206,14 @@ function returnRegisteredEmails() {
 }
 
 let emails = returnRegisteredEmails();
-console.log(emails)
+console.log(emails);
 
 function returnItemInfo() {
     let item = {
         name: "Koko Krunch",
         description: "Koko Krunch is a staple chocolate cereal breakfast",
-        price: 75
-    }
+        price: 75,
+    };
 
     return item;
 }
@@ -201,19 +222,17 @@ let item1 = returnItemInfo();
 console.log(item1);
 
 function retrieveAccount() {
-
     let account = {
         username: "michaelVillanueva",
         income: 60000,
-        expenses: 25000
-    }
+        expenses: 25000,
+    };
 
     return account;
 }
 
 let account = retrieveAccount();
-console.log(account)
-
+console.log(account);
 
 /*
 12. Add your changes.
