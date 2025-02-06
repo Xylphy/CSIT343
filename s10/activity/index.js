@@ -88,7 +88,7 @@ let newUser = register(
     "Lilo",
     "Pelekai",
     "lilostitch@gmail.com",
-    "liloohana1234",
+    "liloohana",
     "09276612409"
 );
 console.log(newUser);
