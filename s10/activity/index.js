@@ -77,7 +77,7 @@ function checkIfPassed(myScore, totalScore) {
 function register(firstname, lastname, email, password, mobileNum) {
     return {
         firstName: firstname,
-        lname: lastname,
+        lastName: lastname,
         email: email,
         password: password,
         mobileNum: mobileNum,
