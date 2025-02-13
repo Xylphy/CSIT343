@@ -1,4 +1,4 @@
-// console.log("Hello World");
+console.log("Hello World");
 
 /*
 1. In the S13 folder, create an activity folder and an index.html and index.js file inside of it.
@@ -19,4 +19,18 @@
 */ 
 
 
+function printOddNumbers(number){
+    let oddNumbers = "The odd numbers found are the following: ";
+    for(let i = 0; i < number; i++){
+        if(i % 2 === 0){
+            continue;
+        } else {
+            oddNumbers += i + ", ";
+        }
+        if(i > 10){
+            break;
+        }
+    }
+    return oddNumbers;
+}
 
