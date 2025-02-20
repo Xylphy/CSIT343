@@ -75,3 +75,29 @@ spliceFruits(2, 1, "Durian");
 console.log("Mutated array from splice method");
 console.log(fruits);
 
+/*
+    Mini Activity (5 mins)
+    1. Create an array named guestList with the following names: ["Alice", "Bob", "Charlie", "David"]. Print the initial array.
+    2. "Eve" arrives and should be placed between "Alice" and "Bob". Print the updated array.
+    3. "Charlie" decides to leave. Print the updated array.
+    4. The last guest on the list also decides to leave.  Print the updated array.
+    5. Print the final length of guestList.
+    6. Take a screenshot of the browser console and send it in the chat.
+
+    Expected Output:
+    ["Alice", "Bob", "Charlie", "David"]
+    ["Alice", "Eve", "Bob", "Charlie", "David"]
+    ["Alice", "Eve", "Bob", "David"] 
+    ["Alice", "Eve", "Bob"] 
+    Final guest list length: 3
+*/
+
+let guestList = ["Alice", "Bob", "Charlie", "David"];
+console.log(guestList);
+guestList.splice(1, 0, "Eve");
+console.log(guestList);
+guestList.splice(3, 1);
+console.log(guestList);
+guestList.pop();
+console.log(guestList);
+console.log("Final guest list length: " + guestList.length);
