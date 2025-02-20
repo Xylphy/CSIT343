@@ -4,8 +4,9 @@
     - Copy the template provided by your Instructor and paste it in an index.js file.
     - Update your local sessions git repository and push to git with the commit message of Add template code s17.
     - Console log the message Hello World to ensure that the script file is properly associated with the html file.
-
 */
+
+console.log("Hello World");
 
 /*
     Create functions which can manipulate our arrays.
@@ -25,7 +26,14 @@ console.log(registeredPlanets);
         - Invoke the function and pass the registeredPlanets and a planet as arguments
 */
 
-
+function addPlanet(array, planet) {
+    if (typeof planet === "string") {
+        array.push(planet);
+    } else {
+        return "Incorrect Input Type";
+    }
+    return array;
+}
 
 
 /*
@@ -38,9 +46,14 @@ console.log(registeredPlanets);
         - Invoke the function and pass the registeredPlanets array as an argument.
 */
 
-
-
-
+function deletePlanet(array) {
+    if (array.length > 0) {
+        array.pop();
+    } else {
+        return "No planets registered.";
+    }
+    return array;
+}
 
 /* 
     4. Create a function called unshiftPlanet which will add a planet in the registeredPlanets array using unshift().
@@ -53,7 +66,14 @@ console.log(registeredPlanets);
         
 */
 
-
+function unshiftPlanet(array, planet) {
+    if (typeof planet === "string") {
+        array.unshift(planet);
+    } else {
+        return "Incorrect Input Type";
+    }
+    return array;
+}
 
 /* 
     5. Create a function called shiftPlanet which will delete a planet in the registeredPlanets array using shift().
@@ -65,6 +85,14 @@ console.log(registeredPlanets);
         - Invoke the function and pass the registeredPlanets array as an argument
 */
 
+function shiftPlanet(array) {
+    if (array.length > 0) {
+        array.shift();
+    } else {
+        return "No planets registered.";
+    }
+    return array;
+}
 
 /* 
     6. Create a function called splicePlanets which will replace 1 element in the registeredPlanets array with static values using splice().
@@ -76,4 +104,11 @@ console.log(registeredPlanets);
         - Invoke the function and pass the registeredPlanets array and a planet as a parameter
 */
 
-
+function splicePlanets(array, planet, index) {
+    if (array.length > 0) {
+        array.splice(index, 1, planet);
+    } else {
+        return "No planets registered.";
+    }
+    return array;
+}
