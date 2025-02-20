@@ -47,3 +47,26 @@ let numbersToReverse = [1, 2, 3, 4, 5]
 console.log("Before reverse: " + numbersToReverse);
 numbersToReverse.reverse();
 console.log("After reverse: " + numbersToReverse);
+
+/*
+    Mini Activity (5 mins)
+
+    1. Create an array of guestList: ["Charlie", "Alice", "David", "Bob", "Eve"]. Print the original list.
+    2. Arrange the guest names in alphabetical order. Print the updated list.
+    3. Rearrange the guest list in reverse alphabetical order. Print the final list.
+    4. Take a screenshot of the browser console and send it in the chat.
+
+    Expected Output:
+
+    ["Charlie", "Alice", "David", "Bob", "Eve"]
+    ["Alice", "Bob", "Charlie", "David", "Eve"]
+    ["Eve", "David", "Charlie", "Bob", "Alice"]  
+
+*/
+
+let guestList = ["Charlie", "Alice", "David", "Bob", "Eve"];
+console.log(guestList);
+guestList.sort();
+console.log(guestList);
+guestList.reverse();
+console.log(guestList);
