@@ -130,3 +130,53 @@ let fiveStarMovies = movies.filter(function (movie) {
 });
 
 console.log(fiveStarMovies);
+
+/*
+    Mini Activity (5 mins)
+    
+    1. Create an array named `students` containing objects with the following properties:
+       - name (string)
+       - score (number)
+       - attendance (boolean) → true if the student attended all sessions, false otherwise
+
+       const students = [
+           { name: "Alice", score: 85, attendance: true },
+           { name: "Bob", score: 72, attendance: false },
+           { name: "Charlie", score: 90, attendance: true },
+           { name: "David", score: 60, attendance: true },
+           { name: "Eve", score: 78, attendance: false }
+       ];
+
+    2. Find students who:
+       - Scored at least 80
+       - AND attended all sessions (attendance: true)
+
+    3. Return an array of messages in the following format:
+       - <student_name> has complete attendance and passed with a score of <score>.
+
+    4. Print the final result.
+
+    5. Take a screenshot of the console output and send it in the chat.
+
+    Expected output:
+    [
+        "Alice has complete attendance and passed with a score of 85.",
+        "Charlie has complete attendance and passed with a score of 90."
+    ]
+*/
+
+const students = [
+    { name: "Alice", score: 85, attendance: true },
+    { name: "Bob", score: 72, attendance: false },
+    { name: "Charlie", score: 90, attendance: true },
+    { name: "David", score: 60, attendance: true },
+    { name: "Eve", score: 78, attendance: false },
+];
+
+students
+    .filter((student) => student.score >= 80 && student.attendance === true)
+    .forEach((student) => {
+        console.log(
+            `${student.name} has complete attendance and passed with a score of ${student.score}.`
+        );
+    });
