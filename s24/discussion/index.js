@@ -87,5 +87,56 @@ myCar.year = 2021;
 console.log(myCar);
 
 // Create a new object from car class with initialized values:
-const myNewCar = Car("Toyota", "Vios", 2021);
+const myNewCar = new Car("Toyota", "Vios", 2021);
 console.log(myNewCar);
+/*
+
+    Mini Activity (10 mins)
+ 
+    1. Create a class named Product with the following:
+
+        - A constructor that accepts name, price, and category.
+
+        - A method getInfo() using an arrow function and implicit return, which returns:
+<name> belongs to the <category> with price of Php <price>
+
+    2. A method applyDiscount() that:
+
+        - Accepts a discount percentage.
+
+        - Reduces the price based on the discount and returns the updated price.
+
+    3. Log the following result in the console:
+
+        - getInfo()
+
+        - applyDiscount(10)
+
+    4. Take a screenshot of the console and sent it in the chat
+ 
+    Expected output:
+ 
+    Gaming Laptop belongs to the Electronics category and costs Php 45000.
+
+    Price after discount: Php 40500
+
+*/
+
+class Product {
+    constructor(name, price, category) {
+        this.name = name;
+        this.price = price;
+        this.category = category;
+    }
+    getInfo = () =>
+        `${this.name} belongs to the ${this.category} with price of Php ${this.price}`;
+
+    applyDiscount(discount) {
+        return this.price - (this.price * discount) / 100;
+    }
+}
+
+const gamingLaptop = new Product("Gaming Laptop", 45000, "Electronics");
+console.log(gamingLaptop.getInfo());
+console.log(`Price after discount: Php ${gamingLaptop.applyDiscount(10)}`);
+
