@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Theme & Font Changer</title>
+    <style>
+        /* This is an internal CSS. However, this is not the best practice for Web Development. */
+        /* This is only used for this activity. */
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: lightgray;
+        }
+
+        #container {
+            text-align: center;
+            padding: 20px;
+            border: 1px solid gray;
+            background-color: white;
+            border-radius: 5px;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        button {
+            margin: 5px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1 id="text">Choose a Theme!</h1>
+        <button id="themeDark">Dark Theme</button>
+        <button id="themeRed">Red Theme</button>
+        <button id="themeGreen">Green Theme</button>
+        <button id="themeReset">Reset Theme</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
