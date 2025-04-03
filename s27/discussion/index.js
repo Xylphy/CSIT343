@@ -47,7 +47,7 @@ textInput.addEventListener("input", () => {
     if (currentLength >= maxLength) {
         charCount.style.color = "red";
         charCount.innerHTML += " (Character limit reached!)";
-        textInput.value = textInput.value.slice(0, maxLength);
+        textInput.value = textInput.value.slice(0, maxLength - 1);
     } else {
         charCount.style.color = "black";
     }
