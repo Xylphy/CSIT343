@@ -24,3 +24,31 @@ txtFirstName.addEventListener("keyup", (event) => {
     // gets the value of the input object
     console.log(event.target.value);
 });
+/*
+    Mini Activity (10 mins)
+    1. Create a text area where users can type a message.
+    2. Display a character count below the text area.
+    3. Disable typing beyond 100 characters.
+    4. If the user reaches 100 characters, the counter turns red and displays:
+    "Characters: 100 / 100 (Character limit reached!)"
+    5. If the user stays within the limit, the counter remains normal.
+    6. Take a screenshot of your browser and send it in the chat.
+*/
+
+const textInput = document.getElementById("text-input");
+const charCount = document.getElementById("char-count");
+
+textInput.addEventListener("input", () => {
+    const maxLength = 100;
+    const currentLength = textInput.value.length;
+
+    charCount.innerHTML = `Characters: ${currentLength} / ${maxLength}`;
+
+    if (currentLength >= maxLength) {
+        charCount.style.color = "red";
+        charCount.innerHTML += " (Character limit reached!)";
+        textInput.value = textInput.value.slice(0, maxLength);
+    } else {
+        charCount.style.color = "black";
+    }
+});
