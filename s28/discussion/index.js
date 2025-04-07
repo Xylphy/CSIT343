@@ -85,3 +85,53 @@ document
                 console.log(data);
             });
     });
+
+function deletePost(id) {
+    // delete the post from the server
+    fetch(`https://jsonplaceholder.typicode.com/posts/${id}`, {
+        method: "DELETE",
+    })
+        .then(function (response) {
+            return response.json();
+        })
+        .then(function (data) {
+            console.log(data);
+        });
+}
+
+let formViewPost = document.getElementById("form-view-post");
+let formViewBtn = document.getElementById("btn-view-post");
+let formViewTxt = document.getElementById("txt-view-post");
+let divPostView = document.getElementById("div-post-view");
+
+formViewPost.addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    fetch(`https://jsonplaceholder.typicode.com/posts/${formViewTxt.value}`)
+        .then((response) => {
+            if (!response.ok) {
+                throw new Error("Post not found.");
+            }
+            return response.json();
+        })
+        .then((data) => {
+            console.log(data);
+            divPostView.innerHTML = `
+                <h3 id="post-title-${data.id}">${data.title}</h3>
+                <p id="post-body-${data.id}">${data.body}</p>
+            `;
+        })
+        .catch((error) => {
+            divPostView.innerHTML = `
+                <p>${error.message}</p>
+            `;
+        });
+});
+
+formViewTxt.addEventListener("keyup", function () {
+    if (formViewTxt.value.length > 0) {
+        formViewBtn.disabled = false;
+    } else {
+        formViewBtn.disabled = true;
+    }
+});
