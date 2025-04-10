@@ -1,5 +1,20 @@
 console.log("Hello World");
 
+const deleteAllBtn = document.getElementById("delete-all");
+const divPostEntries = document.getElementById("div-post-entries");
+
+const formViewPost = document.getElementById("form-view-post");
+const formViewBtn = document.getElementById("btn-view-post");
+const formViewTxt = document.getElementById("txt-view-post");
+const divPostView = document.getElementById("div-post-view");
+
+const txtEditBody = document.getElementById("txt-edit-body");
+const txtEditTitle = document.getElementById("txt-edit-title");
+const txtEditId = document.getElementById("txt-edit-id");
+
+const formEditPost = document.getElementById("form-edit-post");
+const submitButton = document.getElementById("btn-submit-update");
+
 // [SECTION] Fetch method
 // allows us to get, post, update or even delete data in a server
 
@@ -44,7 +59,7 @@ const showPosts = (posts) => {
     // console.log(postEntries);
     // we can add html element to another element as string by
     // updating it using innerHTML property.
-    document.getElementById("div-post-entries").innerHTML = postEntries;
+    divPostEntries.innerHTML = postEntries;
 };
 
 // Add data to our server
@@ -90,6 +105,7 @@ document
 
 function deletePost(id) {
     // delete the post from the server
+    alert("Post deleted.");
     fetch(`https://jsonplaceholder.typicode.com/posts/${id}`, {
         method: "DELETE",
     })
@@ -98,13 +114,9 @@ function deletePost(id) {
         })
         .then(function (data) {
             console.log(data);
+            document.getElementById(`post-${id}`).remove();
         });
 }
-
-let formViewPost = document.getElementById("form-view-post");
-let formViewBtn = document.getElementById("btn-view-post");
-let formViewTxt = document.getElementById("txt-view-post");
-let divPostView = document.getElementById("div-post-view");
 
 formViewPost.addEventListener("submit", function (event) {
     event.preventDefault();
@@ -150,25 +162,36 @@ formViewTxt.addEventListener("keyup", function () {
         e. Take a screenshot of your webpage after the form is pre-filled and send it in the chat.
 */
 
-const txtEditBody = document.getElementById("txt-edit-body");
-const txtEditTitle = document.getElementById("txt-edit-title");
-const txtEditId = document.getElementById("txt-edit-id");
-
-const formEditPost = document.getElementById("form-edit-post");
-const submitButton = document.getElementById("btn-submit-update");
-
 formEditPost.addEventListener("submit", function (event) {
     event.preventDefault();
     const postId = txtEditId.value;
     const postTitle = document.getElementById(`post-title-${postId}`);
     const postBody = document.getElementById(`post-body-${postId}`);
 
-    postTitle.innerText = txtEditTitle.value;
-    postBody.innerText = txtEditBody.value;
+    fetch(`https://jsonplaceholder.typicode.com/posts/${postId}`, {
+        method: "PUT",
+        body: JSON.stringify({
+            title: txtEditTitle.value,
+            body: txtEditBody.value,
+            userId: postId,
+        }),
+        headers: {
+            "Content-type": "application/json; charset=UTF-8",
+        },
+    })
+        .then(function (response) {
+            return response.json();
+        })
+        .then(function (data) {
+            console.log(data);
+            alert("Successfully updated.");
+            postTitle.innerText = txtEditTitle.value;
+            postBody.innerText = txtEditBody.value;
 
-    submitButton.setAttribute("disabled", "true");
-    txtEditTitle.value = "";
-    txtEditBody.value = "";
+            submitButton.setAttribute("disabled", "true");
+            txtEditTitle.value = "";
+            txtEditBody.value = "";
+        });
 });
 
 function edit(id) {
@@ -180,3 +203,8 @@ function edit(id) {
     txtEditTitle.value = postTitle.innerText;
     submitButton.removeAttribute("disabled");
 }
+
+deleteAllBtn.addEventListener("click", function () {
+    alert("All Posts Deleted");
+    divPostEntries.innerHTML = "";
+});
