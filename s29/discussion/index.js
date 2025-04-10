@@ -148,15 +148,29 @@ formViewTxt.addEventListener("keyup", function () {
             iii. post body
         d. Enable the "Update" button by removing the disable attribute
         e. Take a screenshot of your webpage after the form is pre-filled and send it in the chat.
-*/ 
+*/
 
 const txtEditBody = document.getElementById("txt-edit-body");
 const txtEditTitle = document.getElementById("txt-edit-title");
+const txtEditId = document.getElementById("txt-edit-id");
 
-function edit(id){
-    const postTitle = document.getElementById(`post-title-${id}`);
-    const postBody = document.getElementById(`post-body-${id}`);
+const formEditPost = document.getElementById("form-edit-post");
+
+formEditPost.addEventListener("submit", function (event) {
+    event.preventDefault();
+    const postId = txtEditId.value;
+    const postTitle = document.getElementById(`post-title-${postId}`);
+    const postBody = document.getElementById(`post-body-${postId}`);
 
     postTitle.innerText = txtEditTitle.value;
     postBody.innerText = txtEditBody.value;
+});
+
+function edit(id) {
+    const postTitle = document.getElementById(`post-title-${id}`);
+    const postBody = document.getElementById(`post-body-${id}`);
+
+    txtEditId.value = id;
+    txtEditBody.value = postBody.innerText;
+    txtEditTitle.value = postTitle.innerText;
 }
