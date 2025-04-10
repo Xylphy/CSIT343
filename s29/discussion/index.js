@@ -155,6 +155,7 @@ const txtEditTitle = document.getElementById("txt-edit-title");
 const txtEditId = document.getElementById("txt-edit-id");
 
 const formEditPost = document.getElementById("form-edit-post");
+const submitButton = document.getElementById("btn-submit-update");
 
 formEditPost.addEventListener("submit", function (event) {
     event.preventDefault();
@@ -164,6 +165,10 @@ formEditPost.addEventListener("submit", function (event) {
 
     postTitle.innerText = txtEditTitle.value;
     postBody.innerText = txtEditBody.value;
+
+    submitButton.setAttribute("disabled", "true");
+    txtEditTitle.value = "";
+    txtEditBody.value = "";
 });
 
 function edit(id) {
@@ -173,4 +178,5 @@ function edit(id) {
     txtEditId.value = id;
     txtEditBody.value = postBody.innerText;
     txtEditTitle.value = postTitle.innerText;
+    submitButton.removeAttribute("disabled");
 }
