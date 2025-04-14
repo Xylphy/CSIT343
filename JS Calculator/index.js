@@ -8,7 +8,7 @@ let btnSubtraction = document.getElementById("btn-subtraction");
 let btnMultiplication = document.getElementById("btn-multiplication");
 let btnDivision = document.getElementById("btn-division");
 
-let history = document.getElementById("history");
+let history = document.getElementById("historyList");
 let history_list = [];
 let btnClearHistory = document.getElementById("clear-history");
 
@@ -108,7 +108,7 @@ function doOperation(operator) {
         } finally {
             history.innerHTML =
                 history.innerHTML +
-                `<br>${history_list[history_list.length - 1].toString()}`;
+                `<li>${history_list[history_list.length - 1].toString()}</li>`;
             checkHistory();
         }
     }
