@@ -10,6 +10,7 @@ let btnDivision = document.getElementById("btn-division");
 
 let history = document.getElementById("history");
 let history_list = [];
+let btnClearHistory = document.getElementById("clear-history");
 
 let btnStore = document.getElementById("store-result");
 let btnMemoryRecall = document.getElementById("memory-recall");
@@ -141,4 +142,9 @@ btnMemoryRecall.addEventListener("click", function () {
 btnMemoryClear.addEventListener("click", function () {
     memory = null;
     alert("Memory cleared.");
+});
+
+btnClearHistory.addEventListener("click", function () {
+    history_list = [];
+    history.innerHTML = "";
 });
