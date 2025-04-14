@@ -57,6 +57,14 @@ function checkInputs() {
     }
 }
 
+function checkHistory() {
+    if (history.innerHTML != "") {
+        btnClearHistory.disabled = false;
+    } else {
+        btnClearHistory.disabled = true;
+    }
+}
+
 function doOperation(operator) {
     if (checkInputs()) {
         let num1Value = parseFloat(num1.value);
@@ -101,6 +109,7 @@ function doOperation(operator) {
             history.innerHTML =
                 history.innerHTML +
                 `<br>${history_list[history_list.length - 1].toString()}`;
+            checkHistory();
         }
     }
 }
@@ -147,4 +156,5 @@ btnMemoryClear.addEventListener("click", function () {
 btnClearHistory.addEventListener("click", function () {
     history_list = [];
     history.innerHTML = "";
+    checkHistory();
 });
