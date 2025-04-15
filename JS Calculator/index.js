@@ -158,3 +158,23 @@ btnClearHistory.addEventListener("click", function () {
     history.innerHTML = "";
     checkHistory();
 });
+
+document.addEventListener("keyup", function (event) {
+    console.log(event.key);
+    if (checkInputs()) {
+        switch (event.key) {
+            case "+":
+                doOperation("+");
+                break;
+            case "-":
+                doOperation("-");
+                break;
+            case "*":
+                doOperation("*");
+                break;
+            case "/":
+                doOperation("/");
+                break;
+        }
+    }
+});
